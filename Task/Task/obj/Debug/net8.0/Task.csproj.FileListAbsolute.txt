@@ -1,0 +1,15 @@
+/Users/samirhebibov/Desktop/demo/Task/Task/bin/Debug/net8.0/Task
+/Users/samirhebibov/Desktop/demo/Task/Task/bin/Debug/net8.0/Task.deps.json
+/Users/samirhebibov/Desktop/demo/Task/Task/bin/Debug/net8.0/Task.runtimeconfig.json
+/Users/samirhebibov/Desktop/demo/Task/Task/bin/Debug/net8.0/Task.dll
+/Users/samirhebibov/Desktop/demo/Task/Task/bin/Debug/net8.0/Task.pdb
+/Users/samirhebibov/Desktop/demo/Task/Task/obj/Debug/net8.0/Task.GeneratedMSBuildEditorConfig.editorconfig
+/Users/samirhebibov/Desktop/demo/Task/Task/obj/Debug/net8.0/Task.AssemblyInfoInputs.cache
+/Users/samirhebibov/Desktop/demo/Task/Task/obj/Debug/net8.0/Task.AssemblyInfo.cs
+/Users/samirhebibov/Desktop/demo/Task/Task/obj/Debug/net8.0/Task.csproj.CoreCompileInputs.cache
+/Users/samirhebibov/Desktop/demo/Task/Task/obj/Debug/net8.0/Task.sourcelink.json
+/Users/samirhebibov/Desktop/demo/Task/Task/obj/Debug/net8.0/Task.dll
+/Users/samirhebibov/Desktop/demo/Task/Task/obj/Debug/net8.0/refint/Task.dll
+/Users/samirhebibov/Desktop/demo/Task/Task/obj/Debug/net8.0/Task.pdb
+/Users/samirhebibov/Desktop/demo/Task/Task/obj/Debug/net8.0/Task.genruntimeconfig.cache
+/Users/samirhebibov/Desktop/demo/Task/Task/obj/Debug/net8.0/ref/Task.dll
