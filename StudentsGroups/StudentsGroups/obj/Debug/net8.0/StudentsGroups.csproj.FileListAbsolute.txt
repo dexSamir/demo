@@ -1,0 +1,15 @@
+/Users/samirhebibov/Desktop/demo/StudentsGroups/StudentsGroups/bin/Debug/net8.0/StudentsGroups
+/Users/samirhebibov/Desktop/demo/StudentsGroups/StudentsGroups/bin/Debug/net8.0/StudentsGroups.deps.json
+/Users/samirhebibov/Desktop/demo/StudentsGroups/StudentsGroups/bin/Debug/net8.0/StudentsGroups.runtimeconfig.json
+/Users/samirhebibov/Desktop/demo/StudentsGroups/StudentsGroups/bin/Debug/net8.0/StudentsGroups.dll
+/Users/samirhebibov/Desktop/demo/StudentsGroups/StudentsGroups/bin/Debug/net8.0/StudentsGroups.pdb
+/Users/samirhebibov/Desktop/demo/StudentsGroups/StudentsGroups/obj/Debug/net8.0/StudentsGroups.GeneratedMSBuildEditorConfig.editorconfig
+/Users/samirhebibov/Desktop/demo/StudentsGroups/StudentsGroups/obj/Debug/net8.0/StudentsGroups.AssemblyInfoInputs.cache
+/Users/samirhebibov/Desktop/demo/StudentsGroups/StudentsGroups/obj/Debug/net8.0/StudentsGroups.AssemblyInfo.cs
+/Users/samirhebibov/Desktop/demo/StudentsGroups/StudentsGroups/obj/Debug/net8.0/StudentsGroups.csproj.CoreCompileInputs.cache
+/Users/samirhebibov/Desktop/demo/StudentsGroups/StudentsGroups/obj/Debug/net8.0/StudentsGroups.sourcelink.json
+/Users/samirhebibov/Desktop/demo/StudentsGroups/StudentsGroups/obj/Debug/net8.0/StudentsGroups.dll
+/Users/samirhebibov/Desktop/demo/StudentsGroups/StudentsGroups/obj/Debug/net8.0/refint/StudentsGroups.dll
+/Users/samirhebibov/Desktop/demo/StudentsGroups/StudentsGroups/obj/Debug/net8.0/StudentsGroups.pdb
+/Users/samirhebibov/Desktop/demo/StudentsGroups/StudentsGroups/obj/Debug/net8.0/StudentsGroups.genruntimeconfig.cache
+/Users/samirhebibov/Desktop/demo/StudentsGroups/StudentsGroups/obj/Debug/net8.0/ref/StudentsGroups.dll
