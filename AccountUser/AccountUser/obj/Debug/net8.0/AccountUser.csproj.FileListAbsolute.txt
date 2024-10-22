@@ -1,0 +1,15 @@
+/Users/samirhebibov/Desktop/demo/AccountUser/AccountUser/bin/Debug/net8.0/AccountUser
+/Users/samirhebibov/Desktop/demo/AccountUser/AccountUser/bin/Debug/net8.0/AccountUser.deps.json
+/Users/samirhebibov/Desktop/demo/AccountUser/AccountUser/bin/Debug/net8.0/AccountUser.runtimeconfig.json
+/Users/samirhebibov/Desktop/demo/AccountUser/AccountUser/bin/Debug/net8.0/AccountUser.dll
+/Users/samirhebibov/Desktop/demo/AccountUser/AccountUser/bin/Debug/net8.0/AccountUser.pdb
+/Users/samirhebibov/Desktop/demo/AccountUser/AccountUser/obj/Debug/net8.0/AccountUser.GeneratedMSBuildEditorConfig.editorconfig
+/Users/samirhebibov/Desktop/demo/AccountUser/AccountUser/obj/Debug/net8.0/AccountUser.AssemblyInfoInputs.cache
+/Users/samirhebibov/Desktop/demo/AccountUser/AccountUser/obj/Debug/net8.0/AccountUser.AssemblyInfo.cs
+/Users/samirhebibov/Desktop/demo/AccountUser/AccountUser/obj/Debug/net8.0/AccountUser.csproj.CoreCompileInputs.cache
+/Users/samirhebibov/Desktop/demo/AccountUser/AccountUser/obj/Debug/net8.0/AccountUser.sourcelink.json
+/Users/samirhebibov/Desktop/demo/AccountUser/AccountUser/obj/Debug/net8.0/AccountUser.dll
+/Users/samirhebibov/Desktop/demo/AccountUser/AccountUser/obj/Debug/net8.0/refint/AccountUser.dll
+/Users/samirhebibov/Desktop/demo/AccountUser/AccountUser/obj/Debug/net8.0/AccountUser.pdb
+/Users/samirhebibov/Desktop/demo/AccountUser/AccountUser/obj/Debug/net8.0/AccountUser.genruntimeconfig.cache
+/Users/samirhebibov/Desktop/demo/AccountUser/AccountUser/obj/Debug/net8.0/ref/AccountUser.dll
