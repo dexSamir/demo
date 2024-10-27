@@ -1,0 +1,37 @@
+﻿<Properties StartupConfiguration="{008EB840-01F4-47C2-8A80-4EA90338E05D}|Default">
+  <MonoDevelop.Ide.ItemProperties.Core FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.ConsoleApp FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Core/Data/AppDbContext.cs">
+    <Files>
+      <File FileName="ConsoleApp/Program.cs" Line="1" Column="1" />
+      <File FileName="Core/Data/AppDbContext.cs" Line="73" Column="57" />
+      <File FileName="Core/Models/Room.cs" Line="22" Column="1" />
+      <File FileName="Core/Models/Hotel.cs" Line="18" Column="1" />
+      <File FileName="Core/Helper/Exception/NotAvailableException.cs" Line="8" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ConsoleApp" expanded="True">
+            <Node name="ConsoleApp" expanded="True" />
+            <Node name="Core">
+              <Node name="Data" expanded="True">
+                <Node name="AppDbContext.cs" selected="True" />
+              </Node>
+              <Node name="Helper" expanded="True">
+                <Node name="Exception" expanded="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>
