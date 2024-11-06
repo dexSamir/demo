@@ -56,7 +56,7 @@ namespace AccountUser
 
         public void ShowInfo()
         {
-            Console.WriteLine($"{ID}. {Fullname} {Email}");
+            Console.WriteLine($"Id:{ID} Fullname:{Fullname} Email:{Email}");
         }
     }
 }

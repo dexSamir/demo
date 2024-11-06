@@ -1,25 +1,23 @@
 ﻿<Properties StartupConfiguration="{9FF93B0A-5124-4B67-A9DA-18953057C763}|Default">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Example PreferredExecutionTarget="MonoDevelop.Default" FirstBuild="True" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Core/Data/AppDbContext.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Core/Model/Hotel.cs">
     <Files>
-      <File FileName="Example/Program.cs" Line="1" Column="1" />
-      <File FileName="Core/Model/Hotel.cs" Line="8" Column="34" />
-      <File FileName="Core/Model/Room.cs" Line="25" Column="31" />
-      <File FileName="Core/Data/AppDbContext.cs" Line="7" Column="12" />
+      <File FileName="Example/Program.cs" Line="91" Column="1" />
+      <File FileName="Core/Model/Hotel.cs" Line="9" Column="18" />
+      <File FileName="Core/Model/Room.cs" Line="1" Column="1" />
+      <File FileName="Core/Data/AppDbContext.cs" Line="18" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Example" expanded="True">
-            <Node name="Core">
-              <Node name="Data" expanded="True">
-                <Node name="AppDbContext.cs" selected="True" />
+            <Node name="Core" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="FrameworkReferences" expanded="True" />
               </Node>
-              <Node name="Model" expanded="True" />
+              <Node name="Model" expanded="True">
+                <Node name="Hotel.cs" selected="True" />
+              </Node>
             </Node>
             <Node name="Example" expanded="True" />
           </Node>
@@ -27,7 +25,11 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.Core FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Example FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>

@@ -1,4 +1,24 @@
 ﻿<Properties StartupConfiguration="{BD5ACBA7-2FD9-422C-A1C7-72F471C673D2}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.customList FirstBuild="True" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="customList/Program.cs">
+    <Files>
+      <File FileName="customList/Program.cs" Line="35" Column="1" />
+      <File FileName="customList/CustomList.cs" Line="109" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="customList" expanded="True">
+            <Node name="customList" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.customList PreferredExecutionTarget="MonoDevelop.Default" FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
