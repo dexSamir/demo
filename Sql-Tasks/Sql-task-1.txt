@@ -1,0 +1,39 @@
+create table roles (
+  id int primary key identity, 
+  names nvarchar(50) not null
+)
+
+create table users(
+	id int primary key identity, 
+  	username nvarchar(50) not null,
+  	password nvarchar(50) not null, 
+  	RoleId int foreign key references roles(id)
+)
+
+select U.username, U.password, R.names from roles as R
+join users as U 
+on U.id = R.id
+create table roles (
+  id int primary key identity, 
+  names nvarchar(50) not null
+)
+
+insert into roles
+values ('Admin'),('Moderator'),('User');
+
+create table users(
+	id int primary key identity, 
+  	username nvarchar(50) not null,
+  	password nvarchar(50) not null, 
+  	RoleId int foreign key references roles(id)
+)
+
+insert into users 
+values ('SamirHabibov', 'samir123', 1),
+('miri', 'miri123', 2),
+('xalid', 'xalid123', 3); 
+
+
+select U.username, U.password, R.names from roles as R
+join users as U 
+on U.id = R.id

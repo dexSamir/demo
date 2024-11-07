@@ -1,0 +1,41 @@
+create table Products (
+  Id int primary key identity, 
+  names nvarchar(50) not null, 
+  Price decimal(6,2) not null,
+  CategoryId int foreign key references Categories(Id),
+  Cost decimal(6, 2) NOT NULL 
+)
+
+insert into Products 
+values ('Dodge Durango', 45000.00, 1, 35000.00),
+('Dodge Charger', 35000.00, 2, 25000.00),
+('Dodge Challenger', 55000.00, 3, 42000.00);
+
+create table Categories(
+	Id int primary key identity, 
+  	Name nvarchar(50) not null,
+)
+
+insert into Categories
+values ('SUV'),('Sedan'),('Sports Car');
+
+create table Colors(
+	Id int primary key identity, 
+  	Name nvarchar(50) not null,
+)
+
+insert into Colors
+values ('Red'),('Blue'),('Black'),('White');
+
+create table ColorsProducts(
+	Id int primary Key identity, 
+    ColorId int FOREIGN KEY REFERENCES Colors(Id),
+  	ProductId int foreign key references Products(Id)
+)
+
+select P.Name AS ProductName, P.Price, P.Cost, C.Name AS CategoryName, Cl.Name AS ColorName
+from Products P
+join Categories C on P.CategoryId = C.Id
+left join ColorsProducts CP on P.Id = CP.ProductId
+left join Colors Cl on CP.ColorId = Cl.Id;
+
