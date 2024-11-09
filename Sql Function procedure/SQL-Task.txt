@@ -1,0 +1,145 @@
+-- muellim men bu taski online compiler-den yazdim. bacardigim qeder error-suz yazmaga calisdim ama mueyyen qeder syntax error ve s. ola biler(olmaya da biler) men code-u execute eliye bilmirem yeni neticeni gore bilmirem. sadece code-u yaza bilirem deye gozumden qacan seyler ola biler. (bunu nezere alarsiz da qiymetlendirmede pls.)
+
+
+
+create table Categories(
+Id int primary key identity, 
+Name nvarchar(50) not null
+)
+insert into Categories
+values('Video Games'),('Game Reviews'),('Esports'),('Game Development')
+
+create table Tags(
+Id int primary key identity, 
+Name nvarchar(50) not null
+)
+insert into Tags 
+values('Action'),('RPG'),('Multiplayer'),('Indie'),('Strategy')
+
+create table Users(
+Id int primary key identity, 
+Username nvarchar(100) not null unique, 
+Fullname nvarchar(100) not null, 
+Age int check(Age > 0 and Age < 150)
+)
+                   
+insert into Users 
+values('samir123', 'Samir Hebibov', 19),
+('turan123', 'Turan Mirze', 21),
+('toghrul123', 'Togrul Mehdiyev', 20),
+('kenan123', 'Kenan Qurbanli', 22)
+                   
+                   
+create table Blogs (
+Id int primary key identity,
+Title nvarchar(50) not null, 
+Description nvarchar(50),  
+UserId int foreign key references Users(Id), 
+CategoryId int foreign key references Categories(Id)
+)
+                   
+insert into Blogs 
+values('Top 10 Action Games of 2024', 'An overview of the best action games this year', 1, 1),
+('Why RPGs Are the Best Genre', 'Discussing why RPGs captivate players', 2, 1),
+('The Future of Esports', 'Analyzing trends in competitive gaming', 3, 3)
+
+
+create table Comments (
+Id int primary key identity,
+Content nvarchar(250) not null, 
+UserId int foreign key references Users(Id), 
+BlogId int foreign key references Blogs(Id)
+)
+
+insert into Comments 
+values('Great list, I agree with most of the picks!', 2, 1),
+('RPGs have always been my favorite too!', 1, 2),
+('Interesting read on where esports is heading.', 1, 3) 
+                   
+create table TagsBlogs(
+Id int primary key identity,
+TagId int foreign key references Tags(Id),
+BlogId int foreign key references Blogs(Id)
+)
+
+insert into TagsBlogs 
+values(1, 1), (2, 2), (3, 3)
+
+
+create view UserBlogs as
+select 
+B.Title as [Blog Title],
+U.Username as [Username],
+U.Fullname as [User Fullname]
+from Users as U
+join Blogs as B
+on B.UserId = U.Id
+
+create view CategoryBlogs as
+select 
+B.Title as [Blog Title],
+C.Name as [Category Name]
+from Categories as C
+join Blogs as B
+on B.CategoryId = C.Id
+
+create procedure usp_getUserComments @userId int
+AS
+begin
+    select 
+        C.Content as [User Comment],
+        U.Username as [Username],
+        U.Fullname as [User Fullname]
+    from Users as U
+    join Comments as C on U.Id = C.UserId 
+    where U.Id = @userId
+end
+
+
+exec usp_getUserComments @userId = 1
+
+create procedure usp_getUserBlogs @userId int
+AS
+begin
+    select 
+        U.Username as [Username],
+        U.Fullname as [User Fullname],
+        B.Title as [Blog Title],
+        B.Description as [Blog Description]
+    from Users as U
+    join Blogs as B on U.Id = B.UserId 
+    where U.Id = @userId
+end
+
+
+exec usp_getUserBlogs @userId = 1
+
+create function getBlogCount (@categoryId int )
+returns int
+as 
+begin 
+declare @BlogCount int
+select @BlogCount = count(*) from Blogs
+where CategoryId = @categoryId;
+
+return @BlogCount
+end 
+
+select dbo.getBlogCount(1);
+
+create function getUserBlogs (@userId int)
+returns table
+as
+return 
+(
+    select 
+        B.Title as [Blog Title],
+        B.Description as [Blog Description]
+    from Blogs B
+    where B.UserId = @userId
+)
+
+select * from dbo.getUserBlogs(1);
+
+
+
