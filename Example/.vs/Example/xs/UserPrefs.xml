@@ -1,25 +1,17 @@
 ﻿<Properties StartupConfiguration="{9FF93B0A-5124-4B67-A9DA-18953057C763}|Default">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Core/Model/Hotel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Example/Program.cs">
     <Files>
-      <File FileName="Example/Program.cs" Line="91" Column="1" />
-      <File FileName="Core/Model/Hotel.cs" Line="9" Column="18" />
-      <File FileName="Core/Model/Room.cs" Line="1" Column="1" />
-      <File FileName="Core/Data/AppDbContext.cs" Line="18" Column="6" />
+      <File FileName="Example/Program.cs" Line="7" Column="42" />
+      <File FileName="Example/Student.cs" Line="6" Column="26" />
+      <File FileName="Example/Teacher.cs" Line="11" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Example" expanded="True">
-            <Node name="Core" expanded="True">
-              <Node name="Dependencies" expanded="True">
-                <Node name="FrameworkReferences" expanded="True" />
-              </Node>
-              <Node name="Model" expanded="True">
-                <Node name="Hotel.cs" selected="True" />
-              </Node>
+            <Node name="Example">
+              <Node name="Program.cs" selected="True" />
             </Node>
-            <Node name="Example" expanded="True" />
           </Node>
         </State>
       </Pad>
@@ -28,8 +20,8 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.Core FirstBuild="True" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Example PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Example FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>

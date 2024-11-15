@@ -1,0 +1,95 @@
+Muellim mende msSql yoxdu. Code-lari online compiler-de yazmisam ama yene de esecute eliye bildirdim yeni code-larin neticesini görmeden yazdım. Nezere alarsiniz pls)
+
+
+
+
+create table Authors (
+	Id int identity primary key, 
+  	Name nvarchar(50) not null, 
+    Surname nvarchar(50) not null
+)
+insert into Authors
+values('Fjodor','Dostojevski'),
+('Stephen', 'King')
+
+create table Books (
+	Id int identity primary key, 
+  	Name nvarchar(100) not null check(length(Name) between 2 and 100),
+  	PageCount int not null check(PageCount > 10), 
+  	AuthorId int foreign key references Authors(Id)
+)
+
+insert into Books 
+values('Crime and Punishment', 624, 1),
+('The Brothers Karamazov', 1072, 1),
+('Notes from UnderGround', 176, 1),
+('The Stand', 447, 2),
+('It', 1168, 2),
+('The Green Mile', 432, 2),
+('Rita Hayworth and Shawshank Redemption', 128, 2)
+
+
+create procedure AuthorsBook(@AuthorName nvarhcar(50))
+as
+begin 
+select B.Id, B.Name, B.PageCount
+from Authors as A
+join Books as B
+on A.Id = B.AuthorId 
+where 
+A.Name = @AuthorName
+end
+
+create procedure AuthorInsert(
+@AuthorName nvarhcar(50) not null, 
+@AuthorSurname nvarchar(50) not null
+)
+as 
+begin 
+insert into Authors
+values(@AuthorName, @AuthorSurname)
+end 
+
+create procedure AuthorDelete(@AuthorId int)
+as 
+begin 
+delete from Authors
+where Id = @AuthorId
+end
+
+create procedure AuthorUpdate(
+@AuthorId int,
+@AuthorName nvarchar(50) not null,
+@AuthorSurname nvarchar(50) not null
+)
+as 
+begin 
+Update Authors
+set Name = @AuthorName,
+Surname = @AuthorSurname
+where Authors.Id = @AuthorId
+end
+
+create view BookDetail as 
+Select 
+B.Id as [Book Id],
+B.Name as [Book Name], 
+B.PageCount as [Page Count],
+concat(A.Name, ' ' , A.Surname) as [Author fullname]
+from Books as B
+join Authors as A
+on B.AuthorId = A.Id
+
+create view AuthorDetail as 
+select 
+A.id as [Author Id]
+concat(A.Name, ' ' , A.Surname) as [Author Fullname],
+count(B.Id) as BooksCount,
+max(B.PageCount) as MaxPageCount
+from Authors as A
+join Books as B
+on A.Id = B.AuthorId 
+group by 
+A.Id, A.Name, A.Surname;
+
+
