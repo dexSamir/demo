@@ -1,0 +1,35 @@
+﻿<Properties StartupConfiguration="{F940289C-AF4A-41C1-A3AC-C3A7775FD617}|https">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ToDoApp/views/Todo/Index.cshtml">
+    <Files>
+      <File FileName="ToDoApp/Program.cs" />
+      <File FileName="ToDoApp/Models/Todo.cs" />
+      <File FileName="ToDoApp/Controllers/TodoController.cs" />
+      <File FileName="ToDoApp/views/Todo/Index.cshtml" Line="16" Column="13" />
+      <File FileName="ToDoApp/views/Todo/Create.cshtml" />
+      <File FileName="ToDoApp/views/Todo/Update.cshtml" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ToDoApp" expanded="True">
+            <Node name="ToDoApp" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="views" expanded="True">
+                <Node name="Todo" expanded="True">
+                  <Node name="Index.cshtml" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.ToDoApp PreferredExecutionTarget="/Applications/Google Chrome.app" />
+</Properties>

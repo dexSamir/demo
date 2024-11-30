@@ -1,0 +1,20 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+</head>
+<body>
+
+    @*<p>@{ViewData["name"]} @{ViewData["surname"]}</p>*@
+    <ul>
+        @foreach (var item in (List<string>)ViewData["students"])
+            {
+                <li>@item</li>
+            }
+    </ul>
+</body>
+</html>

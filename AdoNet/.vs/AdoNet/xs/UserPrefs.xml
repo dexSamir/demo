@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{BFCC3039-6A87-4D05-94DE-E23F3D93BCB5}|Default">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.AdoNet PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="AdoNet/Models/Movie.cs">
+    <Files>
+      <File FileName="AdoNet/Program.cs" Line="40" Column="41" />
+      <File FileName="AdoNet/Helper/SqlHelper.cs" />
+      <File FileName="AdoNet/Models/Movie.cs" Line="12" Column="1" />
+      <File FileName="AdoNet/Service/MovieService.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="AdoNet" expanded="True">
+            <Node name="AdoNet" expanded="True">
+              <Node name="Helper" selected="True" />
+              <Node name="Models" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

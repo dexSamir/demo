@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{C59A865B-32AC-47E7-890B-66AFB096F8E4}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="EFCore/Contexts/AppDbContext.cs">
+    <Files>
+      <File FileName="EFCore/Program.cs" />
+      <File FileName="EFCore/Models/ToDo.cs" />
+      <File FileName="EFCore/Contexts/AppDbContext.cs" Line="13" Column="110" />
+      <File FileName="EFCore/Migrations/AppDbContextModelSnapshot.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="EFCore" expanded="True">
+            <Node name="EFCore" expanded="True">
+              <Node name="Contexts" expanded="True">
+                <Node name="AppDbContext.cs" selected="True" />
+              </Node>
+              <Node name="Migrations" expanded="True" />
+              <Node name="Models" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.EFCore PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

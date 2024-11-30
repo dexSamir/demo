@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{F4B13447-0677-4DC9-B849-FC414211B119}|Default">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Shop/Models/Basket.cs">
+    <Files>
+      <File FileName="Shop/Program.cs" />
+      <File FileName="Shop/Models/User.cs" />
+      <File FileName="Shop/Models/Product.cs" />
+      <File FileName="Shop/Models/Basket.cs" Line="6" Column="44" />
+      <File FileName="Shop/Contexts/AppDbContext.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Shop" expanded="True">
+            <Node name="Shop" expanded="True">
+              <Node name="Models" expanded="True">
+                <Node name="Basket.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Shop FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

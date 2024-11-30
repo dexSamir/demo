@@ -1,0 +1,45 @@
+﻿<Properties StartupConfiguration="{43399BD7-319A-4AA3-99A1-C5CF2539B99B}|https">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Uniqlo/Areas/Admin/Controllers/ProductContorller.cs">
+    <Files>
+      <File FileName="Uniqlo/Areas/Admin/Controllers/ProductContorller.cs" Line="45" Column="103" />
+      <File FileName="Uniqlo/Areas/Admin/Views/Product/Create.cshtml" Line="53" Column="82" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Uniqlo" expanded="True">
+            <Node name="Uniqlo">
+              <Node name="Areas">
+                <Node name="Admin">
+                  <Node name="Controllers" expanded="True">
+                    <Node name="ProductContorller.cs" selected="True" />
+                  </Node>
+                  <Node name="Views">
+                    <Node name="Shared" expanded="True" />
+                    <Node name="Slider" expanded="True" />
+                  </Node>
+                </Node>
+                <Node name="imgs" expanded="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="ViewModel" expanded="True">
+                <Node name="Common" expanded="True" />
+                <Node name="Product" expanded="True" />
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Uniqlo PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>

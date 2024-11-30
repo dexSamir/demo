@@ -1,0 +1,35 @@
+﻿<Properties StartupConfiguration="{FF8BC906-A3B1-4E82-AD82-D8ED9F31B6CF}|Default">
+  <MonoDevelop.Ide.ItemProperties.Repositories PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Repositories/Repositores/Abstracts/IMovieRepository.cs">
+    <Files>
+      <File FileName="Repositories/Program.cs" />
+      <File FileName="Repositories/Models/Movie.cs" />
+      <File FileName="Repositories/Repositores/Abstracts/IMovieRepository.cs" Line="8" Column="27" />
+      <File FileName="Repositories/Repositores/Implements/MovieRepository.cs" />
+      <File FileName="Repositories/Helpers/SqlHelper.cs" />
+      <File FileName="Repositories/Repositores/Implements/MovieOracle.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Repositories" expanded="True">
+            <Node name="Repositories" expanded="True">
+              <Node name="Repositores" expanded="True">
+                <Node name="Abstracts" expanded="True">
+                  <Node name="IMovieRepository.cs" selected="True" />
+                </Node>
+                <Node name="Implements" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

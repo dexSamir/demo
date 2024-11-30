@@ -1,0 +1,6 @@
+/Users/samirhebibov/Desktop/demo/asb/asb/obj/Debug/net8.0/asb.csproj.AssemblyReference.cache
+/Users/samirhebibov/Desktop/demo/asb/asb/obj/Debug/net8.0/asb.GeneratedMSBuildEditorConfig.editorconfig
+/Users/samirhebibov/Desktop/demo/asb/asb/obj/Debug/net8.0/asb.AssemblyInfoInputs.cache
+/Users/samirhebibov/Desktop/demo/asb/asb/obj/Debug/net8.0/asb.AssemblyInfo.cs
+/Users/samirhebibov/Desktop/demo/asb/asb/obj/Debug/net8.0/asb.csproj.CoreCompileInputs.cache
+/Users/samirhebibov/Desktop/demo/asb/asb/obj/Debug/net8.0/asb.sourcelink.json
