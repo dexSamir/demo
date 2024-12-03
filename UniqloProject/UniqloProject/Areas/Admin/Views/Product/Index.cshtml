@@ -1,0 +1,73 @@
+﻿@model List<Product>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="row">
+    <div class="col">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3 d-flex justify-content-between align-items-center">
+                <h6 class="m-0 font-weight-bold text-primary">Product List</h6>
+                <a asp-action="Create" asp-controller="Product" class="btn btn-outline-primary">Create</a>
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr class="w-100">
+                            <th scope="col">#</th>
+                            <th scope="col">Image</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">CreatedTime</th>
+                            <th scope="col">Cost Price</th>
+                            <th scope="col">Sell Price</th>
+                            <th scope="col">Stock Count</th>
+                            <th scope="col">Discount</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">CreatedTime</th>
+                            <th scope="col">Update</th>
+                            <th scope="col">Delete</th>
+                            <th scope="col">Show/Hide</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.Id</td>
+                                <td><img src="~/imgs/products/@item.CoverImage" width="50" /></td>
+                                <td>@item.Name</td>
+                                <td>@item.Description</td>
+                                <td>@item.CreatedTime</td>
+                                <td>@item.CostPrice</td>
+                                <td>@item.SellPrice</td>
+                                <td>@item.Quantity</td>
+                                <td>@item.Discount</td>
+                                <td>@item.CategoryId</td>
+                                <td>@item.CreatedTime</td>
+                                <td scope="col">
+                                    <a class="btn btn-primary" asp-action="Update" asp-controller="Product" asp-route-id="@item.Id">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </a>
+                                </td>
+                                <td scope="col">
+                                    <a class="btn btn-danger" asp-action="Delete" asp-controller="Product" asp-route-id="@item.Id">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </a>
+                                </td>
+                                <td scope="col">
+                                    <a class="btn @(item.isDeleted? "btn-warning" : "btn-secondary")"
+                                        asp-action="@(item.isDeleted ? "Show" : "Hide")"
+                                        asp-controller="Product"
+                                        asp-route-id="@item.Id">
+                                        <i class="fa-solid @(item.isDeleted ? "fa-eye" : "fa-eye-slash")"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

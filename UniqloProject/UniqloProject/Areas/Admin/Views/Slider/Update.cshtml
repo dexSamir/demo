@@ -1,0 +1,42 @@
+﻿@model UpdateSliderVM
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3 d-flex justify-content-between align-items-center">
+                    <h6 class="m-0 font-weight-bold text-primary">Update Slider</h6>
+                    <a asp-action="Index" asp-controller="Slider" class="btn btn-outline-primary">Return List</a>
+                </div>
+                <div class="card-body">
+                    <form enctype="multipart/form-data" method="post">
+                        <div class="mb-3">
+                            <label asp-for="Title" class="form-label"></label>
+                            <input asp-for="Title" class="form-control">
+                            <span asp-validation-for="Title" class="text-small text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="SubTitle" class="form-label"></label>
+                            <input asp-for="SubTitle" class="form-control">
+                            <span asp-validation-for="SubTitle" class="text-small text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="Link" class="form-label"></label>
+                            <input asp-for="Link" class="form-control">
+                            <span asp-validation-for="Link" class="text-small text-danger"></span>
+                        </div>
+                        <div>
+                            <img src="/imgs/sliders/@Model.ExistingImageUrl" alt="Slider Image" style="max-width: 200px;" />
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="File" class="form-label"></label>
+                            <input asp-for="File" accept="image" class="form-control">
+                            <span asp-validation-for="File" class="text-small text-danger"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

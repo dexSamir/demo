@@ -1,0 +1,63 @@
+﻿@model ProductUpdateVM
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Update Product</h6>
+        <a asp-action="Index" asp-controller="Product" class="btn btn-outline-primary ml-auto">Return List</a>
+    </div>
+    <div class="card-body">
+        <form method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label asp-for="Name">Name</label>
+                <input value="@Model.Name" asp-for="Name" class="form-control">
+                <span asp-validation-for="Name" class="text-small text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description">Description</label>
+                <input value="@Model.Description" asp-for="Description" class="form-control">
+                <span asp-validation-for="Description" class="text-small text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CostPrice">CostPrice</label>
+                <input value="@Model.CostPrice" asp-for="CostPrice" class="form-control">
+                <span asp-validation-for="CostPrice" class="text-small text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="SellPrice">SellPrice</label>
+                <input value="@Model.SellPrice" asp-for="SellPrice" class="form-control">
+                <span asp-validation-for="SellPrice" class="text-small text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Quantity">Quantity</label>
+                <input value="@Model.Quantity" asp-for="Quantity" class="form-control">
+                <span asp-validation-for="Quantity" class="text-small text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Discount">Discount</label>
+                <input value="@Model.Discount" asp-for="Discount" class="form-control">
+                <span asp-validation-for="Discount" class="text-small text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="CoverFile">CoverFile</label>
+                <input value="@Model.CoverFile" asp-for="CoverFile" class="form-control">
+                <span asp-validation-for="CoverFile" class="text-small text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="CategoryId">Categories</label>
+                <select asp-for="CategoryId" class="form-control">
+                    <option selected disabled>Select Category</option>
+                    @foreach (var item in ViewBag.Categories)
+                    {
+                        <option value="@item.Id">@item.Name</option>
+                    }
+                </select>
+                <span asp-validation-for="CategoryId" class="text-small text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Create</button>
+        </form>
+    </div>
+</div>

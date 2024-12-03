@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{5B8561A9-41C9-4D20-8077-A43636E7BBD8}|https">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="UniqloProject/Controllers/AccountController.cs">
+    <Files>
+      <File FileName="UniqloProject/Controllers/AccountController.cs" Line="25" Column="47" />
+      <File FileName="UniqloProject/Program.cs" Line="34" Column="72" />
+      <File FileName="UniqloProject/Views/Account/Register.cshtml" />
+      <File FileName="UniqloProject/DataAccess/UniqloAppDbContext.cs" Line="9" Column="36" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="UniqloProject" expanded="True">
+            <Node name="UniqloProject">
+              <Node name="Controllers" expanded="True">
+                <Node name="AccountController.cs" selected="True" />
+              </Node>
+              <Node name="DataAccess" expanded="True" />
+              <Node name="Migrations" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.UniqloProject PreferredExecutionTarget="/Applications/Google Chrome.app" />
+</Properties>
