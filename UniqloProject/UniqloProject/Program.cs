@@ -21,11 +21,11 @@ public class Program
             opt.Password.RequiredLength = 3;
             opt.Password.RequireNonAlphanumeric = true;
             opt.Password.RequireDigit = true;
-            opt.Password.RequireLowercase = true;
             opt.Password.RequireUppercase = true;
-            opt.Lockout.MaxFailedAccessAttempts = 5;
-            opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(15);
-        }).AddDefaultTokenProviders().AddEntityFrameworkStores<UniqloAppDbContext>(); 
+            opt.Password.RequireLowercase = true;
+            opt.Lockout.MaxFailedAccessAttempts = 10;
+            opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromSeconds(1); 
+        }).AddDefaultTokenProviders().AddEntityFrameworkStores<UniqloAppDbContext>();
 
         var app = builder.Build();
         app.MapControllerRoute(

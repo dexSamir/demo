@@ -8,7 +8,6 @@ namespace UniqloProject.ViewModel.Auths
 		[Required, MaxLength(64)]
 		public string Fullname { get; set; }
 
-        [Required, MaxLength(64)]
         public string Username { get; set; }
 
 		[Required, MaxLength(128), EmailAddress]

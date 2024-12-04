@@ -46,7 +46,7 @@
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <label asp-for="Fullname"></label>
-                                        <input asp-for="Fullname" type="text" class="form-control form-control-user" id="exampleFirstName"
+                                        <input asp-for="Fullname" type="text" class="form-control form-control-user" 
                                                placeholder="FullName">
                                         <span class="text-danger" asp-validation-for="Fullname"></span>
                                     </div>
@@ -85,7 +85,9 @@
                                 </button>                                
                             </form>
                             <hr>
-                            
+                            <div class="text-center">
+                                <a class="small" asp-action="Login">Already have an account? Login!</a>
+                            </div>
                         </div>
                     </div>
                 </div>
