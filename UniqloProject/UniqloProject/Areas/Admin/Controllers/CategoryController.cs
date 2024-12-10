@@ -1,14 +1,17 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.EntityFrameworkCore;
 using UniqloProject.DataAccess;
+using UniqloProject.Helpers;
 using UniqloProject.Models;
 using UniqloProject.ViewModel.Category;
 
 namespace UniqloProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize]
     public class CategoryController : Controller
     {
         readonly UniqloAppDbContext _context;

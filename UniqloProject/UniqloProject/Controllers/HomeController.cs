@@ -43,6 +43,11 @@ namespace UniqloProject.Controllers
                 }).ToListAsync();
 
             return View(vm);
+
+        }
+        public async Task<IActionResult> AccessDenied()
+        {
+            return View(); 
         }
     }
 }

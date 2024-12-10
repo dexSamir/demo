@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using UniqloProject.DataAccess;
@@ -11,9 +12,11 @@ using UniqloProject.DataAccess;
 namespace UniqloProject.Migrations
 {
     [DbContext(typeof(UniqloAppDbContext))]
-    partial class UniqloAppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241206025248_CreatedProductRatingTable")]
+    partial class CreatedProductRatingTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -154,21 +157,6 @@ namespace UniqloProject.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("ProductTag", b =>
-                {
-                    b.Property<int>("ProductsId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("TagsId")
-                        .HasColumnType("integer");
-
-                    b.HasKey("ProductsId", "TagsId");
-
-                    b.HasIndex("TagsId");
-
-                    b.ToTable("ProductTag");
-                });
-
             modelBuilder.Entity("UniqloProject.Models.Category", b =>
                 {
                     b.Property<int>("Id")
@@ -190,46 +178,6 @@ namespace UniqloProject.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
-                });
-
-            modelBuilder.Entity("UniqloProject.Models.Comment", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Content")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<DateTime>("CreatedTime")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<int>("Like")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("ProductId")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<bool>("isDeleted")
-                        .HasColumnType("boolean");
-
-                    b.Property<bool>("isEdited")
-                        .HasColumnType("boolean");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ProductId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Comments");
                 });
 
             modelBuilder.Entity("UniqloProject.Models.Product", b =>
@@ -270,12 +218,17 @@ namespace UniqloProject.Migrations
                     b.Property<decimal>("SellPrice")
                         .HasColumnType("numeric");
 
+                    b.Property<int?>("TagId")
+                        .HasColumnType("integer");
+
                     b.Property<bool>("isDeleted")
                         .HasColumnType("boolean");
 
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
+
+                    b.HasIndex("TagId");
 
                     b.ToTable("Products");
                 });
@@ -515,45 +468,15 @@ namespace UniqloProject.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("ProductTag", b =>
-                {
-                    b.HasOne("UniqloProject.Models.Product", null)
-                        .WithMany()
-                        .HasForeignKey("ProductsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("UniqloProject.Models.Tag", null)
-                        .WithMany()
-                        .HasForeignKey("TagsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("UniqloProject.Models.Comment", b =>
-                {
-                    b.HasOne("UniqloProject.Models.Product", "Product")
-                        .WithMany("Comments")
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("UniqloProject.Models.User", "User")
-                        .WithMany("Comments")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("Product");
-
-                    b.Navigation("User");
-                });
-
             modelBuilder.Entity("UniqloProject.Models.Product", b =>
                 {
                     b.HasOne("UniqloProject.Models.Category", "Category")
                         .WithMany("Products")
                         .HasForeignKey("CategoryId");
+
+                    b.HasOne("UniqloProject.Models.Tag", null)
+                        .WithMany("Products")
+                        .HasForeignKey("TagId");
 
                     b.Navigation("Category");
                 });
@@ -570,7 +493,7 @@ namespace UniqloProject.Migrations
             modelBuilder.Entity("UniqloProject.Models.ProductRating", b =>
                 {
                     b.HasOne("UniqloProject.Models.Product", "Product")
-                        .WithMany("Ratings")
+                        .WithMany()
                         .HasForeignKey("ProductId");
 
                     b.HasOne("UniqloProject.Models.User", "User")
@@ -589,16 +512,12 @@ namespace UniqloProject.Migrations
 
             modelBuilder.Entity("UniqloProject.Models.Product", b =>
                 {
-                    b.Navigation("Comments");
-
                     b.Navigation("Images");
-
-                    b.Navigation("Ratings");
                 });
 
-            modelBuilder.Entity("UniqloProject.Models.User", b =>
+            modelBuilder.Entity("UniqloProject.Models.Tag", b =>
                 {
-                    b.Navigation("Comments");
+                    b.Navigation("Products");
                 });
 #pragma warning restore 612, 618
         }

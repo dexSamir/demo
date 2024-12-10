@@ -1,15 +1,18 @@
 using System.Runtime.Intrinsics.X86;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using UniqloProject.DataAccess;
 using UniqloProject.Extension;
+using UniqloProject.Helpers;
 using UniqloProject.Models;
 using UniqloProject.ViewModel.Slider;
 
 namespace UniqloProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = RoleConstants.Slider)]
     public class SliderController : Controller
     {
         readonly UniqloAppDbContext _context;

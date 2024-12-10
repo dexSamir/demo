@@ -32,6 +32,12 @@
     <None Remove="ViewModel\Product\" />
     <None Remove="Views\Account\" />
     <None Remove="ViewModel\Auths\" />
+    <None Remove="Enums\" />
+    <None Remove="Helpers\" />
+    <None Remove="Views\Product\" />
+    <None Remove="Services\" />
+    <None Remove="Services\Implements\" />
+    <None Remove="Services\Abstracts\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -67,6 +73,12 @@
     <Folder Include="wwwroot\imgs\products\" />
     <Folder Include="Views\Account\" />
     <Folder Include="ViewModel\Auths\" />
+    <Folder Include="Enums\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Views\Product\" />
+    <Folder Include="Services\" />
+    <Folder Include="Services\Implements\" />
+    <Folder Include="Services\Abstracts\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.11">

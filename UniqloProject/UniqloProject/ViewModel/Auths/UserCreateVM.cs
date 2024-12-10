@@ -6,18 +6,19 @@ namespace UniqloProject.ViewModel.Auths
 	public class UserCreateVM
 	{
 		[Required, MaxLength(64)]
-		public string Fullname { get; set; }
+		public string Fullname { get; set; } = null!;
 
-        public string Username { get; set; }
+        [Required, MaxLength(64)]
+        public string Username { get; set; } = null!;
 
 		[Required, MaxLength(128), EmailAddress]
-		public string Email { get; set; }
+		public string Email { get; set; } = null!;
 
-		[Required, MaxLength(32), DataType(DataType.Password)]
-        public string Password { get; set; }
+        [Required, MaxLength(32), DataType(DataType.Password)]
+        public string Password { get; set; } = null!;
 
         [Required, MaxLength(32), DataType(DataType.Password), Compare(nameof(Password))]
-        public string RePassword { get; set; }
-	}
+        public string RePassword { get; set; } = null!;
+    }
 }
 

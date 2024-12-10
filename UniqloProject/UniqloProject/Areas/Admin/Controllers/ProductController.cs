@@ -1,17 +1,20 @@
 using System.Runtime.Intrinsics.X86;
 using System.Security.Cryptography.Xml;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NuGet.Protocol.Core.Types;
 using NuGet.Versioning;
 using UniqloProject.DataAccess;
 using UniqloProject.Extension;
+using UniqloProject.Helpers;
 using UniqloProject.Models;
 using UniqloProject.ViewModel.Product;
 
 namespace UniqloProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = RoleConstants.Product)]
     public class ProductController : Controller
     {
         readonly UniqloAppDbContext _context;

@@ -1,7 +1,11 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using UniqloProject.DataAccess;
+using UniqloProject.Extension;
+using UniqloProject.Helpers;
 using UniqloProject.Models;
+using UniqloProject.Services.Abstracts;
+using UniqloProject.Services.Implements;
 
 namespace UniqloProject;
 
@@ -18,6 +22,7 @@ public class Program
 
         builder.Services.AddIdentity<User, IdentityRole>(opt =>
         {
+            opt.SignIn.RequireConfirmedEmail = true; 
             opt.Password.RequiredLength = 3;
             opt.Password.RequireNonAlphanumeric = true;
             opt.Password.RequireDigit = true;
@@ -26,13 +31,23 @@ public class Program
             opt.Lockout.MaxFailedAccessAttempts = 10;
             opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromSeconds(1); 
         }).AddDefaultTokenProviders().AddEntityFrameworkStores<UniqloAppDbContext>();
+        builder.Services.ConfigureApplicationCookie(x =>
+        {
+            x.AccessDeniedPath = "/Home/AccessDenied";
+        });
+
+        SmtpOptions option = new();
+        builder.Services.Configure<SmtpOptions>(builder.Configuration.GetSection(SmtpOptions.Name));
+        var opt = new SmtpOptions(); 
+        builder.Services.AddScoped<IEmailService, EmailService>();
+
 
         var app = builder.Build();
+        app.UseUserSeed(); 
         app.MapControllerRoute(
             name: "register",
             pattern: "register",
-            defaults: new { controller = "Account", action = "Register" }
-            );
+            defaults: new { controller = "Account", action = "Register" });
 
         app.MapControllerRoute(
             name:"areas",

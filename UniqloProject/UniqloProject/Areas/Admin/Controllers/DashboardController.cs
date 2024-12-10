@@ -1,4 +1,7 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using UniqloProject.Enums;
+using UniqloProject.Helpers;
 
 namespace UniqloProject.Areas.Admin.Controllers
 {
@@ -6,7 +9,8 @@ namespace UniqloProject.Areas.Admin.Controllers
     {
         // GET: DashboardController
         [Area("Admin")]
-        public ActionResult Index()
+        [Authorize(Roles = RoleConstants.Dashboard)]
+        public IActionResult Index()
         {
             return View();
         }

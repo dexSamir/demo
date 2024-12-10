@@ -12,7 +12,10 @@ namespace UniqloProject.Models
 		public string CoverImage { get; set; } = null!; 
 		public int? CategoryId { get; set; }
 		public Category? Category { get; set; }
-		public ICollection<ProductImage>? Images { get; set; }
+		public ICollection<ProductImage>? Images { get; set; } = new HashSet<ProductImage>();
+		public ICollection<ProductRating> Ratings { get; set; } = new HashSet<ProductRating>();
+		public ICollection<Tag> Tags { get; set; } = new HashSet<Tag>();
+		public ICollection<Comment> Comments { get; set; } = new HashSet<Comment>();
 	}
 }
 
