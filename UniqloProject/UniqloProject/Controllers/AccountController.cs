@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis.Differencing;
 using Microsoft.Extensions.Options;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
+using NuGet.Common;
 using UniqloProject.Enums;
 using UniqloProject.Helpers;
 using UniqloProject.Models;
@@ -65,7 +67,7 @@ namespace UniqloProject.Controllers
                 return View();
             }
             string token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-            _service.SendEmailCinfirmation(user.Email, user.UserName, token);
+            _service.SendEmailConfirmation(user.Email, user.UserName, token);
 
             return Content("Email sent"); 
         }
@@ -147,6 +149,63 @@ namespace UniqloProject.Controllers
             await _signInManager.SignInAsync(entity, true);
             return RedirectToAction("Index", "Home");
         }
-    }
 
+        public IActionResult ForgetPassword()
+        {
+            if (isAuthenticated) return RedirectToAction("Index", "Home");
+            return View(); 
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ForgetPassword(ForgetPasswordVM VM)
+        {
+            string email = VM.UsernameOrEmail;
+            if (email is null)
+            {
+                ModelState.AddModelError("", "Email is required");
+                return View(); 
+            }
+            User user = email.Contains('@') ?await _userManager.FindByEmailAsync(email) :await _userManager.FindByNameAsync(email); 
+            if(user == null)
+            {
+                ModelState.AddModelError("", "User not found!");
+                return View(); 
+            }
+
+            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+            //var resetLink = Url.Action("ResetPassword", "Account", new { token, email = user.Email }, Request.Scheme);
+            _service.SendEmailConfirmation(user.Email, user.UserName, token);
+            return Content("Password reset link sent to your email"); 
+        }
+        public IActionResult ResetPassword (string token , string email)
+        {
+            if (email is null) return BadRequest();
+            var model = new ResetPasswordVM { Token = token, Email = email };
+            return View(model); 
+        }
+        [HttpPost]
+        public async Task<IActionResult> ResetPassword(ResetPasswordVM model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            var user = await _userManager.FindByEmailAsync(model.Email);
+            if (user == null)
+            {
+                ModelState.AddModelError("", "Invalid email.");
+                return View();
+            }
+
+            var result = await _userManager.ResetPasswordAsync(user, model.Token, model.newPassword);
+            if (!result.Succeeded)
+            {
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+                }
+                return View(model);
+            }
+
+            return RedirectToAction(nameof(Login));
+        }
+    }
 }

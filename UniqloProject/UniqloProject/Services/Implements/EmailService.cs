@@ -19,21 +19,31 @@ namespace UniqloProject.Services.Implements
         public EmailService(IOptions<SmtpOptions> option, IHttpContextAccessor _acc)
         {
             var opt = option.Value;
-            _client = new(opt.Host, opt.Port); 
-            _client.Credentials = new NetworkCredential(opt.Sender, opt.Password);
+            _client = new("smtp.gmail.com", 587); 
+            _client.Credentials = new NetworkCredential("samirah-bp215@code.edu.az", "zyjm appz kraq nfrs");
             _client.EnableSsl = true;
             _from = new MailAddress( opt.Sender , "Uniqlo");
             Context = _acc.HttpContext;
         }
 
-        public void SendEmailCinfirmation(string reciever, string name, string token)
+        public void SendEmailConfirmation(string reciever, string name, string token)
         {
             MailAddress to = new(reciever);
             MailMessage msg = new MailMessage(_from, to);
             msg.Subject = "Confirm your email address";
-            string url = Context.Request.Scheme + "://" + Context.Request.Host + "/" + "/Account/VerifyEmail?token=" + token + "&user=" + name ; 
+            string url = Context.Request.Scheme + "://" + Context.Request.Host + "/" + "Account/ResetPassword?token=" + token + "&email=" + name ; 
             msg.Body = EmailTemplate.VerifyEmail.Replace("__$name" , name).Replace("__$link",url );
             _client.Send(msg); 
+        }
+
+        public void SendEmailResetPassword(string to, string username, string resetLink)
+        {
+            MailAddress reciever = new(to);
+            MailMessage msg = new MailMessage(_from, reciever);
+            msg.Subject = "Reset Your Password";
+            msg.Body = $"Hello {username},<br/><br/>Please reset your password by clicking the link below:<br/><a href='{resetLink}'>Reset Password</a>";
+            msg.IsBodyHtml = true;
+            _client.Send(msg);
         }
     }
 }

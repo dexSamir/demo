@@ -33,11 +33,16 @@ namespace UniqloProject.Areas.Admin.Controllers
 
         public IActionResult Create()
         {
-            return View();
+            return View(); 
         }
         [HttpPost]
         public async Task<IActionResult> Create(SliderCreateVM vm)
         {
+            if(vm.File == null || vm.File.Length == 0)
+            {
+                ModelState.AddModelError("File", "File is required");
+                return View(vm); 
+            }
             if(!vm.File.IsValidType("image"))
             {
                 ModelState.AddModelError("File", "File type must be an image");

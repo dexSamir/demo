@@ -3,7 +3,9 @@ namespace UniqloProject.Services.Abstracts
 {
 	public interface IEmailService
 	{
-        void SendEmailCinfirmation(string reciever, string name, string token); 
-	}
+        void SendEmailConfirmation(string reciever, string name, string token);
+        void SendEmailResetPassword(string to, string username, string resetLink);
+
+    }
 }
 
