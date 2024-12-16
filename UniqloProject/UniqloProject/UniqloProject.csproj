@@ -38,6 +38,10 @@
     <None Remove="Services\" />
     <None Remove="Services\Implements\" />
     <None Remove="Services\Abstracts\" />
+    <None Remove="ViewModel\Basket\" />
+    <None Remove="ViewComponents\" />
+    <None Remove="Views\Shared\Components\" />
+    <None Remove="Views\Shared\Components\Header\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -79,6 +83,10 @@
     <Folder Include="Services\" />
     <Folder Include="Services\Implements\" />
     <Folder Include="Services\Abstracts\" />
+    <Folder Include="ViewModel\Basket\" />
+    <Folder Include="ViewComponents\" />
+    <Folder Include="Views\Shared\Components\" />
+    <Folder Include="Views\Shared\Components\Header\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.11">

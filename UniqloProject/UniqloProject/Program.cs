@@ -22,13 +22,13 @@ public class Program
 
         builder.Services.AddIdentity<User, IdentityRole>(opt =>
         {
-            opt.SignIn.RequireConfirmedEmail = true; 
+            opt.SignIn.RequireConfirmedEmail = false; 
             opt.Password.RequiredLength = 3;
-            opt.Password.RequireNonAlphanumeric = true;
+            opt.Password.RequireNonAlphanumeric = false;
             opt.Password.RequireDigit = true;
-            opt.Password.RequireUppercase = true;
-            opt.Password.RequireLowercase = true;
-            opt.Lockout.MaxFailedAccessAttempts = 10;
+            opt.Password.RequireUppercase = false;
+            opt.Password.RequireLowercase = false;
+            opt.Lockout.MaxFailedAccessAttempts = 20;
             opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromSeconds(1); 
         }).AddDefaultTokenProviders().AddEntityFrameworkStores<UniqloAppDbContext>();
         builder.Services.ConfigureApplicationCookie(x =>
@@ -41,9 +41,12 @@ public class Program
         var opt = new SmtpOptions(); 
         builder.Services.AddScoped<IEmailService, EmailService>();
 
+        //builder.Services.AddSession(); 
 
         var app = builder.Build();
-        app.UseUserSeed(); 
+        app.UseUserSeed();
+
+        //app.UseSession(); 
         app.MapControllerRoute(
             name: "register",
             pattern: "register",

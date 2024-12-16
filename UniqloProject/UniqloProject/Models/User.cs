@@ -7,7 +7,7 @@ namespace UniqloProject.Models
 	{
 		public string Fullname{ get; set; } = null!;
         public string? ProfileImageUrl { get; set; }
-		public ICollection<Comment> Comments { get; set; } = new HashSet<Comment>(); 
+		public ICollection<Comment>? Comments { get; set; } 
     }
 }
 

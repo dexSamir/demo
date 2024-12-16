@@ -1,9 +1,12 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+
 namespace UniqloProject.ViewModel.Auths
 {
 	public class ForgetPasswordVM
 	{
-		public string UsernameOrEmail { get; set; } = null!;
+		[EmailAddress]
+		public string Email { get; set; } = null!;
 	}
 }
 

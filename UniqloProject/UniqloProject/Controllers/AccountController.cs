@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis.Differencing;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 using NuGet.Common;
@@ -66,10 +67,11 @@ namespace UniqloProject.Controllers
                 }
                 return View();
             }
-            string token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-            _service.SendEmailConfirmation(user.Email, user.UserName, token);
+            //string token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+            //_service.SendEmailConfirmation(user.Email, user.UserName, token);
 
-            return Content("Email sent"); 
+            //return Content("Email sent");
+            return RedirectToAction(nameof(Login)); 
         }
 
         public async Task<IActionResult> Login()
@@ -92,6 +94,11 @@ namespace UniqloProject.Controllers
             {
                 ModelState.AddModelError("", "username or password is wrong");
                 return View(); 
+            }
+            if (!await _userManager.IsEmailConfirmedAsync(user))
+            {
+                ModelState.AddModelError("", "Email is not confirmed. Please confirm your email.");
+                return View();
             }
             var result = await _signInManager.PasswordSignInAsync(user,vm.Password,  vm.RememberMe, true); 
             if(!result.Succeeded)
@@ -133,7 +140,7 @@ namespace UniqloProject.Controllers
 
         public async Task<IActionResult> VerifyEmail(string token, string user )
         {
-            var entity = await _userManager.FindByNameAsync(user);
+            var entity = await _userManager.FindByEmailAsync(user);
             if (entity is null) return BadRequest(); 
             var result = await _userManager.ConfirmEmailAsync(entity, token.Replace(' ', '+'));
             if(!result.Succeeded)
@@ -157,23 +164,16 @@ namespace UniqloProject.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> ForgetPassword(ForgetPasswordVM VM)
+        public async Task<IActionResult> ForgetPassword(string email)
         {
-            string email = VM.UsernameOrEmail;
-            if (email is null)
-            {
-                ModelState.AddModelError("", "Email is required");
-                return View(); 
-            }
-            User user = email.Contains('@') ?await _userManager.FindByEmailAsync(email) :await _userManager.FindByNameAsync(email); 
-            if(user == null)
+            var user = await _userManager.FindByEmailAsync(email); 
+            if (user == null)
             {
                 ModelState.AddModelError("", "User not found!");
                 return View(); 
             }
-
             var token = await _userManager.GeneratePasswordResetTokenAsync(user);
-            //var resetLink = Url.Action("ResetPassword", "Account", new { token, email = user.Email }, Request.Scheme);
+            var resetLink = Url.Action("ResetPassword", "Account", new { token, email = user.Email }, Request.Scheme);
             _service.SendEmailConfirmation(user.Email, user.UserName, token);
             return Content("Password reset link sent to your email"); 
         }
@@ -204,7 +204,6 @@ namespace UniqloProject.Controllers
                 }
                 return View(model);
             }
-
             return RedirectToAction(nameof(Login));
         }
     }

@@ -1,39 +1,36 @@
 ﻿<Properties StartupConfiguration="{5B8561A9-41C9-4D20-8077-A43636E7BBD8}|https">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.UniqloProject PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="UniqloProject">
-            <Node name="UniqloProject">
+            <Node name="UniqloProject" expanded="True">
               <Node name="Areas" expanded="True">
                 <Node name="Admin" expanded="True">
-                  <Node name="Views">
+                  <Node name="Controllers" expanded="True" />
+                  <Node name="Views" expanded="True">
                     <Node name="Product" expanded="True" />
-                    <Node name="Slider" expanded="True" />
                   </Node>
                 </Node>
               </Node>
-              <Node name="Controllers">
-                <Node name="AccountController.cs" selected="True" />
-              </Node>
-              <Node name="ViewModel" expanded="True">
-                <Node name="Auths" expanded="True" />
-                <Node name="Slider" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="ProductRating.cs" selected="True" />
               </Node>
               <Node name="Views" expanded="True">
-                <Node name="Account" expanded="True" />
+                <Node name="Product" expanded="True" />
               </Node>
+              <Node name="appsettings.json" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.UniqloProject PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

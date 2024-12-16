@@ -102,12 +102,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/samirhebibov/Desktop/demo/UniqloProject/UniqloProject/Views/Product/Detail.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9EZXRhaWwuY3NodG1s
+[/Users/samirhebibov/Desktop/demo/UniqloProject/UniqloProject/Views/Product/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/samirhebibov/Desktop/demo/UniqloProject/UniqloProject/Views/Product/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/samirhebibov/Desktop/demo/UniqloProject/UniqloProject/Views/Shared/Components/Header/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvSGVhZGVyL0RlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/samirhebibov/Desktop/demo/UniqloProject/UniqloProject/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/samirhebibov/Desktop/demo/UniqloProject/UniqloProject/Views/Shared/_ProductPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Qcm9kdWN0UGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/samirhebibov/Desktop/demo/UniqloProject/UniqloProject/Views/_ViewImports.cshtml]

@@ -35,6 +35,7 @@ namespace UniqloProject.Controllers
                 .Where(x => !x.isDeleted)
                 .Select(x => new ProductItemVM
                 {
+                    Id = x.Id,
                     Discount = x.Discount,
                     ImageUrl = x.CoverImage,
                     IsInStock = x.Quantity > 0,

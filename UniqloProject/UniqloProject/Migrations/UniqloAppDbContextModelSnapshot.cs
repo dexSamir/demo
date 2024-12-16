@@ -192,7 +192,7 @@ namespace UniqloProject.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("UniqloProject.Models.Comment", b =>
+            modelBuilder.Entity("UniqloProject.Models.Comments", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -530,7 +530,7 @@ namespace UniqloProject.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("UniqloProject.Models.Comment", b =>
+            modelBuilder.Entity("UniqloProject.Models.Comments", b =>
                 {
                     b.HasOne("UniqloProject.Models.Product", "Product")
                         .WithMany("Comments")

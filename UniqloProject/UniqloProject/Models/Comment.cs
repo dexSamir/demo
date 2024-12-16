@@ -7,10 +7,10 @@ namespace UniqloProject.Models
         public bool isEdited { get; set; }
 		public int Like { get; set; }
 
-		public int ProductId { get; set; }
-		public Product Product { get; set; } = null!;
-        public string UserId { get; set; } = null!;
-		public User User { get; set; } = null!;
+		public int? ProductId { get; set; }
+		public Product? Product { get; set; } 
+        public string? UserId { get; set; } 
+		public User? User { get; set; } 
 
     }
 }

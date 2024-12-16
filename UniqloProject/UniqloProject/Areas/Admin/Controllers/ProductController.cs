@@ -45,7 +45,7 @@ namespace UniqloProject.Areas.Admin.Controllers
                     var FileNames = vm.OtherFiles.Where(x => !x.IsValidType("image")).Select(x => x.FileName);
                     ModelState.AddModelError("OtherFiles", string.Join(", ", FileNames) + " are(is) not an image"); 
                 }
-                if(vm.OtherFiles.All(x => x.IsValidSize(300)))
+                if(!vm.OtherFiles.All(x => x.IsValidSize(300)))
                 {
                     var FileNames = vm.OtherFiles.Where(x => !x.IsValidSize(300)).Select(x => x.FileName);
                     ModelState.AddModelError("OtherFiles", string.Join(", ", FileNames) + "are(is) must be less than 300"); 
@@ -119,7 +119,7 @@ namespace UniqloProject.Areas.Admin.Controllers
             vm.SellPrice = data.SellPrice;
             vm.CategoryId = data.CategoryId;
             vm.Quantity = data.Quantity;
-
+            
             ViewBag.Categories = await _context.Categories.Where(x => !x.isDeleted).ToListAsync();
             return View(vm); 
         }
